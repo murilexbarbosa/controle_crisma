@@ -1,0 +1,40 @@
+- Catequista
+nome
+data de nascimento
+data de inicio
+status
+
+- crismando
+nome
+data de nascimento
+batismo
+eucaristia
+nome pai
+nome mae
+ano
+
+- documentos
+crismando
+tipo documento
+imagem
+data entrega
+observação
+
+- crismando_telefone
+crismando
+tipo
+numero
+
+- turmas
+catequista
+crismando
+ano
+
+- encontros
+crismando
+data encontro
+presença
+observação
+
+
+

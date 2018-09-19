@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from controle_pastoral.core import views
 
 urlpatterns = [
+    path('', views.home, name='core'),
     path('admin/', admin.site.urls),
 ]

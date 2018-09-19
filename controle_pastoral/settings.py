@@ -57,7 +57,7 @@ ROOT_URLCONF = 'controle_pastoral.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['controle_pastoral\core\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

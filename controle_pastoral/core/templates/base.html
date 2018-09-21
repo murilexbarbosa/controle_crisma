@@ -24,25 +24,14 @@
         <ul class="navbar-nav mr-auto">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Cadastro</a>
-              <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Crismando</a>
-                <a class="dropdown-item" href="#">Catequista</a>
-              </div>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
               <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Controle</a>
               <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="#">Encontro</a>
-                <a class="dropdown-item" href="#">Documentos</a>
+                <a class="dropdown-item" href="{% url 'main_crismando'  %}">Crismandos</a>
+                <a class="dropdown-item" href="#">Catequistas</a>
+                <a class="dropdown-item" href="#">Encontros</a>           
               </div>
             </li>
           </ul>
-
-  
-
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

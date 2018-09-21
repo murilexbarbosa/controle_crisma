@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'controle_pastoral.core',    
     'controle_pastoral.crisma',
     'controle_pastoral.crismando',
     'controle_pastoral.catequista',
@@ -57,7 +58,7 @@ ROOT_URLCONF = 'controle_pastoral.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['controle_pastoral\core\templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

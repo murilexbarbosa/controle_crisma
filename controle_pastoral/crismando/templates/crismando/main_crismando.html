@@ -1,14 +1,28 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <h1>Controle de Crismandos</h1>
+    <h2>Controle de Crismandos</h2>
     <div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
             </div>
-            <input type="text" id="ex3" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            <input class="input-text" id="input_ano" name="input_ano" type="text">
         </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Catequistas</span>
+            </div>
+            <select class="custom-select  mb-3">
+                <option selected>Open this select menu</option>
+            </select>
+        </div>        
+    </div>
+    <div>
+
+    </div>
+    <div>
+        <a href="{% url 'nova_categoria' %}" class="btn btn-default" role="button">Adicionar Categoria</a>
     </div>
 
 

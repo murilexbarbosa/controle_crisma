@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'widget_tweaks',
     'controle_pastoral.core',    
     'controle_pastoral.crisma',
     'controle_pastoral.crismando',

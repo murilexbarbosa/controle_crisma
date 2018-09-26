@@ -3,27 +3,46 @@
 {% block body %}
     <h2>Controle de Crismandos</h2>
     <div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Default</span>
-            </div>
-            <input class="input-text" id="input_ano" name="input_ano" type="text">
-        </div>
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">Catequistas</span>
-            </div>
-            <select class="custom-select  mb-3">
-                <option selected>Open this select menu</option>
-            </select>
-        </div>        
-    </div>
-    <div>
-
-    </div>
-    <div>
         <a href="{% url 'novo_crismando' %}" class="btn btn-default" role="button">Adicionar Crismando</a>
     </div>
+    <div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Ano</span>
+            </div>
+            <input class="input-text" id="input_ano" name="input_ano" type="text">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Nome</span>
+            </div>           
+            <input class="input-text" id="input_nome" name="input_nome" type="text"> 
+        </div> 
+        <a href="{% url 'filtrar_crismando' %}" class="btn btn-info">Filtrar</a>    
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Data Nascimento</th>
+                    <th>Ano Crisma</th>
+                    <th colspan="2" style="text-align:center">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for c in crismandos %}
+                    <tr>
+                        <td>{{ c.nome }}</td>
+                        <td>{{ c.data_nascimento }}</td>
+                        <td>{{ c.ano_crisma }}</td>
+                            <td><a href="#" class="btn btn-danger btn-sm">Excluir</a></td>
+                            <td><a href="#" class="btn btn-info btn-sm">Editar</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
 
 
 {% endblock body %}

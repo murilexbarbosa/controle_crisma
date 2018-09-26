@@ -14,6 +14,26 @@
                 {{ form.data_nascimento }}
             </div>
             <div class="form-group">
+                <label for="{{ form.nome_pai.id_for_label }}">Nome do Pai</label>
+                {{ form.nome_pai }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.nome_mae.id_for_label }}">Nome da Mãe</label>
+                {{ form.nome_mae }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.batismo.id_for_label }}">Batismo</label>
+                {{ form.batismo }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.eucaristia.id_for_label }}">Eucaristia</label>
+                {{ form.eucaristia }}
+            </div>      
+            <div class="form-group">
+                <label for="{{ form.ano_crisma.id_for_label }}">Ano da Crisma</label>
+                {{ form.ano_crisma }}
+            </div>                                                      
+            <div class="form-group">
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </div>
         </form>

@@ -5,6 +5,15 @@ from .forms import CrismandoForm
 # Create your views here.
 def main_crismando(request):
     crismandos = Crismando.objects.all()
+    if request.method == 'POST':
+        nome = request.POST.get('input_nome')
+        ano = request.POST.get('input_ano') 
+        if nome:
+            crismandos = crismandos.filter(nome__icontains=nome)
+        if ano:
+            crismandos = crismandos.filter(ano_crisma__icontains=ano)
+        
+
     return render(request, 'crismando/main_crismando.html', {'crismandos': crismandos})
 
 
@@ -20,10 +29,3 @@ def novo_crismando(request):
         form = CrismandoForm()
     return render(request, 'crismando/novo_crismando.html',{'form': form})
 
-
-def filtrar_crismando(request):
-    crismandos = Crismando.objects.all()
-    print(request.POST.get('input_nome'))
-    ##if nome:
-    ##    crismandos = crismandos.objects.filter(nome=nome)
-    return render(request, 'crismando/main_crismando.html', {'crismandos': crismandos})
